@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sk/Projects/CLionProjects/cutPIC/header.h
+stdio.h
+/home/sk/Projects/CLionProjects/cutPIC/stdio.h
+stdlib.h
+/home/sk/Projects/CLionProjects/cutPIC/stdlib.h
+img.h
+/home/sk/Projects/CLionProjects/cutPIC/img.h
+pixel.h
+/home/sk/Projects/CLionProjects/cutPIC/pixel.h
+memory.h
+/home/sk/Projects/CLionProjects/cutPIC/memory.h
+math.h
+/home/sk/Projects/CLionProjects/cutPIC/math.h
+
+/home/sk/Projects/CLionProjects/cutPIC/img.h
+
+/home/sk/Projects/CLionProjects/cutPIC/pixel.c
+header.h
+/home/sk/Projects/CLionProjects/cutPIC/header.h
+pixel.h
+/home/sk/Projects/CLionProjects/cutPIC/pixel.h
+
+/home/sk/Projects/CLionProjects/cutPIC/pixel.h
+

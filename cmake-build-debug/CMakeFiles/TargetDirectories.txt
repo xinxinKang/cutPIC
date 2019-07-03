@@ -1,0 +1,4 @@
+/home/sk/Projects/CLionProjects/cutPIC/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sk/Projects/CLionProjects/cutPIC/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sk/Projects/CLionProjects/cutPIC/cmake-build-debug/CMakeFiles/imgProjectShare.dir
+/home/sk/Projects/CLionProjects/cutPIC/cmake-build-debug/CMakeFiles/imgProject.dir
