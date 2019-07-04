@@ -195,7 +195,7 @@ void doubleThreshold(bmpStruct* bmpData){
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
             if(bmpData->edgePtrData[i * width + j]>Th)
-                bmpData->adEdgePtrData[i*width+j]=200;
+                bmpData->adEdgePtrData[i*width+j]=100;
             else if(bmpData->edgePtrData[i * width + j]<Tl)
                 bmpData->adEdgePtrData[i*width+j]=0;
             else{
@@ -203,25 +203,34 @@ void doubleThreshold(bmpStruct* bmpData){
                 if(bmpData->adEdgePtrData[(i+1)*width+(j-1)]>Th || bmpData->adEdgePtrData[(i+1)*width+(j)]>Th || bmpData->adEdgePtrData[(i+1)*width+(j+1)]>Th
                 || bmpData->adEdgePtrData[(i)*width+(j-1)]>Th || bmpData->adEdgePtrData[(i)*width+(j+1)]>Th
                 || bmpData->adEdgePtrData[(i-1)*width+(j-1)]>Th || bmpData->adEdgePtrData[(i-1)*width+(j)]>Th || bmpData->adEdgePtrData[(i-1)*width+(j+1)]>Th)
-                    bmpData->adEdgePtrData[i*width+j]=200;
+                    bmpData->adEdgePtrData[i*width+j]=100;
                 else bmpData->adEdgePtrData[i*width+j]=0;
              }
         }
     }
 }
 //detect the middle line j=width/2
-IndexOfPixcel indexOfPixcel[600]
-void catchROI(bmpData){
+IndexOfPixcel indexOfPixcel[600];
+void catchROI(bmpStruct* bmpData){
     int i,j;
     int height=bmpData->height;
     int width=bmpData->width;
     int halfWidth=width>>1;
+    int lw,rw;
+    uint8 *tempPrt=bmpData->adEdgePtrData;
     for(i=0;i<height;++i){
         for (j = halfWidth; j >=0; --j) {
-
+            if(tempPrt[i*width+j]==100){
+                lw = j;
+                break;
+            }
         }
         for(j=halfWidth;j<width;++j){
-
+            if(tempPrt[i*width+j]==100){
+                rw = j;
+                break;
+            }
         }
+        tempPrt[i*width+lw/2+rw/2]=200;
     }
 }

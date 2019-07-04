@@ -5,7 +5,7 @@ void imgAndRGB(bmpStruct* bmpData);
 
 void filter_nonMax(bmpStruct* bmpData);
 void doubleThreshold(bmpStruct* bmpData);
-void catchROI(bmpData);
+void catchROI(bmpStruct* bmpData);
 
 typedef struct _indexOfPixcel
 {
